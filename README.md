@@ -2,7 +2,7 @@
 
 **Keep the context. Send the proof.**
 
-**Live demo:** https://qorx-zero-build-week-2026.sour-lacing-2mpwerd8.chatgpt.site
+**Live demo:** https://qorx-zero-build-week.omniscius.workers.dev
 
 **Public video:** https://youtu.be/GBPWgpuye-Q
 

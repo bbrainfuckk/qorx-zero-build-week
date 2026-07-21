@@ -32,5 +32,5 @@ be shown independently from earlier private Qorx research.
 
 ## Public release
 
-- Live demo: https://qorx-zero-build-week-2026.sour-lacing-2mpwerd8.chatgpt.site
+- Live demo: https://qorx-zero-build-week.omniscius.workers.dev
 - Public demo video: https://youtu.be/GBPWgpuye-Q

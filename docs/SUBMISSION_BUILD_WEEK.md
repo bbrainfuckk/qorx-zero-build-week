@@ -48,7 +48,7 @@ Cloudflare Workers-compatible runtime.
 
 ## Evidence to add
 
-- Live demo: https://qorx-zero-build-week-2026.sour-lacing-2mpwerd8.chatgpt.site
+- Live demo: https://qorx-zero-build-week.omniscius.workers.dev
 - Public repository: https://github.com/bbrainfuckk/qorx-zero-build-week
 - Public YouTube demo: https://youtu.be/GBPWgpuye-Q
 - Codex task/session ID: `019f76db-d149-7301-9131-47f898bb2d1c`
