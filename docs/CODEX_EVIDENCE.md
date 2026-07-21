@@ -19,3 +19,5 @@
 - Codex task/session ID: `019f76db-d149-7301-9131-47f898bb2d1c`
 - Feedback confirmation:
 - Final qualifying implementation commit: `10432271105783d03b0230f30b7b86864daec600`
+- Public demo: https://qorx-zero-build-week-2026.sour-lacing-2mpwerd8.chatgpt.site
+- Public video: https://youtu.be/GBPWgpuye-Q

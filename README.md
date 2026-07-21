@@ -2,6 +2,10 @@
 
 **Keep the context. Send the proof.**
 
+**Live demo:** https://qorx-zero-build-week-2026.sour-lacing-2mpwerd8.chatgpt.site
+
+**Public video:** https://youtu.be/GBPWgpuye-Q
+
 Qorx Zero is a standalone, device-local memory layer for AI work. It keeps
 project decisions in the browser, retrieves only the relevant records, builds
 an inspectable proof frame, and sends that bounded frame—not the full memory
@@ -89,7 +93,8 @@ history and [Codex evidence](docs/CODEX_EVIDENCE.md) isolate this Build Week wor
 
 ## Submission material
 
-- [1:56 demo video](docs/Qorx_Zero_Build_Week_Demo.mp4)
+- [Public 1:56 demo video](https://youtu.be/GBPWgpuye-Q)
+- [Source demo video](docs/Qorx_Zero_Build_Week_Demo.mp4)
 - [English demo captions](docs/Qorx_Zero_Build_Week_Demo.srt)
 - [Final video narration](docs/VIDEO_NARRATION.txt)
 - [Architecture](docs/ARCHITECTURE.md)

@@ -29,3 +29,8 @@ be shown independently from earlier private Qorx research.
 - Codex session ID: `019f76db-d149-7301-9131-47f898bb2d1c`
 - Public implementation commit: `10432271105783d03b0230f30b7b86864daec600`
 - Feedback submitted:
+
+## Public release
+
+- Live demo: https://qorx-zero-build-week-2026.sour-lacing-2mpwerd8.chatgpt.site
+- Public demo video: https://youtu.be/GBPWgpuye-Q
