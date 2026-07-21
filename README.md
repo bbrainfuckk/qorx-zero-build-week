@@ -89,8 +89,11 @@ history and [Codex evidence](docs/CODEX_EVIDENCE.md) isolate this Build Week wor
 
 ## Submission material
 
+- [1:56 demo video](docs/Qorx_Zero_Build_Week_Demo.mp4)
+- [English demo captions](docs/Qorx_Zero_Build_Week_Demo.srt)
+- [Final video narration](docs/VIDEO_NARRATION.txt)
 - [Architecture](docs/ARCHITECTURE.md)
-- [Three-minute demo script](docs/DEMO_SCRIPT.md)
+- [Demo run of show](docs/DEMO_SCRIPT.md)
 - [Pitch deck](docs/Qorx-Zero-Pitch-Deck.pptx)
 - [OpenAI Build Week submission copy](docs/SUBMISSION_BUILD_WEEK.md)
 - [Codex and GPT-5.6 evidence](docs/CODEX_EVIDENCE.md)

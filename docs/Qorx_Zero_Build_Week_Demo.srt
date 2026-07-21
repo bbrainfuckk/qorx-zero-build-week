@@ -1,0 +1,103 @@
+1
+00:00:00,050 --> 00:00:06,798
+AI coding tools forget the decisions a project already made, or make you resend far too much context.
+
+2
+00:00:06,798 --> 00:00:11,823
+Qorx Zero gives that memory one clear home: your device.
+
+3
+00:00:11,823 --> 00:00:13,354
+The promise is simple.
+
+4
+00:00:13,354 --> 00:00:14,719
+Keep the context.
+
+5
+00:00:14,719 --> 00:00:15,892
+Send the proof.
+
+6
+00:00:15,892 --> 00:00:21,250
+These project decisions live in IndexedDB and survive browser sessions.
+
+7
+00:00:21,250 --> 00:00:27,091
+Each record carries importance, tags, a source hash, and an optional expiry.
+
+8
+00:00:27,091 --> 00:00:29,923
+Nothing here is hidden behind a black box.
+
+9
+00:00:29,923 --> 00:00:37,640
+When I ask what must ship before analytics, Qorx ranks the local records and selects only the one that supports the answer.
+
+10
+00:00:37,640 --> 00:00:46,339
+The proof desk shows the score, the matched terms, the source hash, the character budget, and the exact frame that can leave the device.
+
+11
+00:00:46,339 --> 00:00:50,918
+If I ask for a production database password, there is no matching proof.
+
+12
+00:00:50,918 --> 00:00:54,693
+Qorx sends nothing and refuses to invent an answer.
+
+13
+00:00:54,693 --> 00:00:56,772
+No proof means no claim.
+
+14
+00:00:56,772 --> 00:00:59,426
+Forgetting is just as visible.
+
+15
+00:00:59,426 --> 00:01:01,849
+One tap deletes the video decision.
+
+16
+00:01:01,849 --> 00:01:04,668
+Asking again confirms it cannot return.
+
+17
+00:01:04,668 --> 00:01:08,341
+Expired records are also removed before recall.
+
+18
+00:01:08,341 --> 00:01:10,089
+The full store stays local.
+
+19
+00:01:10,089 --> 00:01:19,681
+A deterministic ranker combines relevance, importance, and recency, then caps the frame at five records and sixteen hundred characters.
+
+20
+00:01:19,681 --> 00:01:30,663
+The server adapter uses the OpenAI Responses API with GPT-5.6 Terra, low reasoning, low verbosity, and storage disabled.
+
+21
+00:01:30,663 --> 00:01:37,895
+GPT-5.6 receives the question and the visible proof frame, not the whole memory store.
+
+22
+00:01:37,895 --> 00:01:49,068
+Codex with GPT-5.6 helped plan the clean-room boundary, build the app, write the tests, review the provider request, and prepare this public repository.
+
+23
+00:01:49,068 --> 00:01:52,857
+The proprietary Qorx internals remain outside it.
+
+24
+00:01:52,857 --> 00:01:54,043
+Qorx Zero.
+
+25
+00:01:54,043 --> 00:01:55,408
+Keep the context.
+
+26
+00:01:55,408 --> 00:01:56,594
+Send the proof.

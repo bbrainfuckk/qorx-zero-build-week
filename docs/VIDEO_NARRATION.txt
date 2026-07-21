@@ -1,0 +1,19 @@
+AI coding tools forget the decisions a project already made, or make you resend far too much context. Qorx Zero gives that memory one clear home: your device.
+
+The promise is simple. Keep the context. Send the proof.
+
+These project decisions live in IndexedDB and survive browser sessions. Each record carries importance, tags, a source hash, and an optional expiry. Nothing here is hidden behind a black box.
+
+When I ask what must ship before analytics, Qorx ranks the local records and selects only the one that supports the answer. The proof desk shows the score, the matched terms, the source hash, the character budget, and the exact frame that can leave the device.
+
+If I ask for a production database password, there is no matching proof. Qorx sends nothing and refuses to invent an answer. No proof means no claim.
+
+Forgetting is just as visible. One tap deletes the video decision. Asking again confirms it cannot return. Expired records are also removed before recall.
+
+The full store stays local. A deterministic ranker combines relevance, importance, and recency, then caps the frame at five records and sixteen hundred characters.
+
+The server adapter uses the OpenAI Responses API with GPT-5.6 Terra, low reasoning, low verbosity, and storage disabled. GPT-5.6 receives the question and the visible proof frame, not the whole memory store.
+
+Codex with GPT-5.6 helped plan the clean-room boundary, build the app, write the tests, review the provider request, and prepare this public repository. The proprietary Qorx internals remain outside it.
+
+Qorx Zero. Keep the context. Send the proof.

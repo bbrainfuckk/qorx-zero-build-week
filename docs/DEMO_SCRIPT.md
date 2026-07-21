@@ -1,53 +1,47 @@
-# Qorx Zero — three-minute demo script
+# Qorx Zero — demo run of show
 
-Target length: **2:35–2:50**. Record in one take at 1080p. Keep the browser zoom
-large enough to read the proof frame.
+Final length: **1:56** at 1080p. The public video uses spoken narration with a
+separate English caption track; there are no burned-in subtitles.
 
-## 0:00–0:20 — The problem
+## 0:00–0:16 — The promise
 
-“AI tools make us resend the same project context, or push all of it into a
-remote memory service. Qorx Zero gives that memory a clear home: your device.”
+Show the product hero and introduce the device-local memory problem.
 
-Show the hero and say: “Keep the context. Send the proof.”
+## 0:16–0:30 — Remember
 
-## 0:20–0:55 — Remember
+Show the three seeded IndexedDB records, their importance, tags, source hashes,
+and expiry controls.
 
-Scroll to the memory desk. Point out the three seeded memories. Add:
+## 0:30–0:46 — Recall with proof
 
-“The launch video must stay under three minutes.”
+Ask what must ship before analytics. Show the single selected record, score,
+matched terms, source hash, proof-frame character count, and context percentage.
 
-Tag it launch, video, set importance 5, and save it. Reload the page to prove the
-record survived a new session.
+## 0:46–0:57 — Refuse without proof
 
-## 0:55–1:30 — Recall with proof
+Ask for a production database password. Show the empty frame and explicit
+refusal: no proof means no claim.
 
-Ask: “What must we ship before adding analytics?”
+## 0:57–1:08 — Forget
 
-Show that only the matching priority memory enters the proof frame. Point out
-the recall score, matched terms, source hash, context percentage, character
-count, and provider-call counter.
+Delete the Build Week video memory and ask for it again. Show that it cannot
+return.
 
-## 1:30–1:55 — Refuse answers without proof
+## 1:08–1:20 — The Qorx technology
 
-Ask: “What is our production database password?”
+Show the four visible moves: remember locally, rank transparently, bound the
+frame, and delete cleanly.
 
-The proof frame should be empty and the answer should state that the memory is
-missing. Say: “No proof means no invented answer.”
+## 1:20–1:38 — GPT-5.6 evidence gate
 
-## 1:55–2:20 — Forget
+Show the public server adapter using the OpenAI Responses API with GPT-5.6
+Terra, low reasoning, low verbosity, and storage disabled.
 
-Return to the launch-video memory and press **Forget**. Ask about the video
-length again. Show that the deleted memory no longer appears.
+## 1:38–1:53 — Codex and clean-room evidence
 
-## 2:20–2:45 — Architecture and build
+Show the public repository and explain how Codex with GPT-5.6 helped build,
+test, and review this edition while private Qorx internals stayed outside it.
 
-Show docs/ARCHITECTURE.md, then the passing test output. Say:
+## 1:53–1:56 — Close
 
-“The full store is IndexedDB. A transparent ranker applies relevance, recency,
-importance, TTL, and a hard proof cap. The thin server adapter calls GPT-5.6
-Terra. Codex with GPT-5.6 helped build and test this clean-room Hackathon
-Edition.”
-
-## 2:45–2:55 — Close
-
-“Qorx Zero. Keep the memory. Send the proof.”
+“Qorx Zero. Keep the context. Send the proof.”

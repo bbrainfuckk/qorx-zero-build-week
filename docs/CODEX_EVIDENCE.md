@@ -16,6 +16,6 @@
 3. Record the demo showing the repository, tests, and working application.
 4. Submit product feedback from /feedback and record completion.
 
-- Codex task/session ID:
+- Codex task/session ID: `019f76db-d149-7301-9131-47f898bb2d1c`
 - Feedback confirmation:
-- Final commit SHA:
+- Final qualifying implementation commit: `10432271105783d03b0230f30b7b86864daec600`

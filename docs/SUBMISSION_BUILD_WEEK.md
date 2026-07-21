@@ -51,6 +51,6 @@ Cloudflare Workers-compatible runtime.
 - Live demo:
 - Public repository: https://github.com/bbrainfuckk/qorx-zero-build-week
 - Public YouTube demo:
-- Codex task/session ID:
+- Codex task/session ID: `019f76db-d149-7301-9131-47f898bb2d1c`
 - Feedback submitted from /feedback:
-- Final qualifying commit:
+- Final qualifying implementation commit: `10432271105783d03b0230f30b7b86864daec600`
