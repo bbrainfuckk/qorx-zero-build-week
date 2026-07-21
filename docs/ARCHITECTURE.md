@@ -36,8 +36,9 @@ Forgetting has two paths:
 
 Both paths are covered by automated tests and the companion notebook.
 
-## Provider gate
+## GPT-5.6 evidence gate
 
 The server route rejects oversized questions and proof frames. It chooses the
-provider from server configuration, not from untrusted browser input. The model
-is instructed to use only the proof frame and identify missing evidence.
+model from server configuration, uses the OpenAI Responses API with storage
+disabled, and instructs GPT-5.6 to use only the proof frame and identify missing
+evidence.

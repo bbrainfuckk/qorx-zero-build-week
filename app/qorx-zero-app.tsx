@@ -21,20 +21,20 @@ const DEFAULT_QUESTION = "What must we ship before adding analytics?";
 function sampleMemories(now = new Date()): MemoryItem[] {
   return [
     createMemory({
-      text: "Ship the memory demo and forgetting flow before adding analytics.",
+      text: "Ship the local memory demo and forgetting flow before adding analytics.",
       tags: ["launch", "priority", "analytics"],
       importance: 5,
       now,
     }),
     createMemory({
-      text: "Use high-contrast colors and keyboard-accessible controls in the demo.",
-      tags: ["design", "accessibility"],
-      importance: 4,
+      text: "The Build Week video must stay under three minutes and show Codex with GPT-5.6.",
+      tags: ["build-week", "video", "gpt-5.6"],
+      importance: 5,
       now: new Date(now.getTime() - 60_000),
     }),
     createMemory({
-      text: "The public Hackathon Edition must stay standalone and exclude private Qorx internals.",
-      tags: ["security", "public-repo"],
+      text: "Keep the public Qorx Zero edition standalone; exclude private compiler, routing, and benchmark internals.",
+      tags: ["security", "clean-room", "public-repo"],
       importance: 5,
       now: new Date(now.getTime() - 120_000),
     }),
@@ -46,7 +46,7 @@ function localProofAnswer(proof: ProofFrame): string {
     return "No local memory supports that answer yet. Add a relevant memory, then ask again.";
   }
   return [
-    "Provider preview is offline, but the proof gate selected:",
+    "The local proof gate selected:",
     ...proof.selected.map(
       (memory) => `• ${memory.text} [${memory.sourceHash}]`,
     ),
@@ -83,6 +83,12 @@ export function QorxZeroApp() {
         await Promise.all(stored.map((memory) => saveMemory(memory)));
       }
       const live = pruneExpired(stored);
+      const liveIds = new Set(live.map((memory) => memory.id));
+      await Promise.all(
+        stored
+          .filter((memory) => !liveIds.has(memory.id))
+          .map((memory) => forgetMemory(memory.id)),
+      );
       if (active) {
         setMemories(live);
         setReady(true);
@@ -98,6 +104,9 @@ export function QorxZeroApp() {
     () => memories.reduce((total, memory) => total + memory.text.length, 0),
     [memories],
   );
+  const contextSent = totalChars
+    ? `${Math.min(100, (proof.frameChars / totalChars) * 100).toFixed(1)}%`
+    : "0%";
 
   async function addMemory(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -198,17 +207,17 @@ export function QorxZeroApp() {
       </header>
 
       <section className="hero" id="top">
-        <p className="eyebrow">Device-local project memory</p>
-        <h1>Memory that stays with the work.</h1>
+        <p className="eyebrow">Qorx Zero · local memory for Codex</p>
+        <h1>Keep the context. Send the proof.</h1>
         <p className="hero-copy">
-          Qorx Zero keeps project context on your device and sends only the
-          compact proof needed for the current task.
+          Qorx Zero remembers the decisions your project already made, keeps
+          them on your device, and gives GPT-5.6 only the evidence needed now.
         </p>
-        <a className="primary-link" href="#workspace">Try the memory demo</a>
+        <a className="primary-link" href="#workspace">Watch Qorx work</a>
         <div className="hero-proof" aria-label="Product guarantees">
-          <span>Local by default</span>
-          <span>Explicit forgetting</span>
-          <span>Inspectable proof</span>
+          <span>IndexedDB memory</span>
+          <span>≤5-record proof</span>
+          <span>One-tap forgetting</span>
         </div>
       </section>
 
@@ -216,7 +225,7 @@ export function QorxZeroApp() {
         <div className="workspace-heading">
           <div>
             <p className="eyebrow">Live product</p>
-            <h2>Your memory desk</h2>
+            <h2>The proof desk</h2>
           </div>
           <div className="provider-pill">
             <span className="status-dot" aria-hidden="true" />
@@ -234,8 +243,8 @@ export function QorxZeroApp() {
             <span>proof records</span>
           </div>
           <div>
-            <strong>{proof.frameChars || 0}</strong>
-            <span>proof characters</span>
+            <strong>{contextSent}</strong>
+            <span>local context sent</span>
           </div>
           <div>
             <strong>{providerCalls}</strong>
@@ -373,36 +382,52 @@ export function QorxZeroApp() {
                 <span>{proof.frameChars} / {totalChars} local chars</span>
               </div>
               <pre>{proof.frame || "No proof has left the device."}</pre>
+              {proof.selected.length > 0 && (
+                <div className="recall-trace" aria-label="Transparent recall trace">
+                  {proof.selected.map((memory) => (
+                    <div key={memory.id}>
+                      <strong>{memory.score.toFixed(3)}</strong>
+                      <span>{memory.sourceHash}</span>
+                      <span>{memory.matchedTerms.join(" · ")}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </section>
         </div>
       </section>
 
       <section className="story">
-        <p className="eyebrow">One honest boundary</p>
-        <h2>The model never receives your whole memory store.</h2>
+        <p className="eyebrow">The Qorx technology</p>
+        <h2>Every memory decision stays visible.</h2>
         <div className="story-grid">
           <div>
-            <span>1</span>
-            <h3>Keep it here</h3>
-            <p>Memories persist in IndexedDB inside this browser profile.</p>
+            <span>01 · Remember</span>
+            <h3>Keep it local</h3>
+            <p>IndexedDB preserves project decisions across browser sessions.</p>
           </div>
           <div>
-            <span>2</span>
-            <h3>Choose transparently</h3>
-            <p>Keyword overlap, recency, and importance produce a visible score.</p>
+            <span>02 · Rank</span>
+            <h3>Show the score</h3>
+            <p>Relevance, importance, recency, and matched terms stay inspectable.</p>
           </div>
           <div>
-            <span>3</span>
-            <h3>Send the proof</h3>
-            <p>A capped frame goes to the provider; unsupported answers are refused.</p>
+            <span>03 · Bound</span>
+            <h3>Send less</h3>
+            <p>At most five records and 1,600 characters enter the proof frame.</p>
+          </div>
+          <div>
+            <span>04 · Forget</span>
+            <h3>Delete cleanly</h3>
+            <p>One tap or an expired TTL removes a record before the next recall.</p>
           </div>
         </div>
       </section>
 
       <footer>
         <div className="brand"><span className="brand-mark">Q0</span><span>Qorx Zero</span></div>
-        <p>Standalone Hackathon Edition · AGPL-3.0 · No private Qorx source</p>
+        <p>Built with Codex + GPT-5.6 · AGPL-3.0</p>
       </footer>
     </main>
   );

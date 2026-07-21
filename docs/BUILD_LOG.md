@@ -8,9 +8,17 @@
 - Built the device-local memory record and IndexedDB store.
 - Added transparent recall ranking, expiry, proof caps, and source hashes.
 - Added explicit forgetting and a visible proof frame.
-- Added server-side OpenAI and Qwen Responses API adapters.
+- Added a server-side OpenAI Responses API adapter.
 - Added Node test coverage and an independent Python notebook.
 - Prepared architecture, demo, submission, security, and IP documentation.
+
+## July 21, 2026
+
+- Sharpened the product around one promise: keep the context, send the proof.
+- Added visible recall scores, matched terms, context percentage, and source hashes.
+- Made TTL expiry delete records from IndexedDB before the next recall.
+- Removed the unused Qwen provider path from the OpenAI edition.
+- Reviewed the GPT-5.6 Terra request against current OpenAI model guidance.
 
 ## Codex and GPT-5.6
 

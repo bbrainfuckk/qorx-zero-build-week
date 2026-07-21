@@ -104,7 +104,7 @@ export function buildProofFrame(
 
   for (const memory of ranked) {
     if (selected.length >= maxItems) break;
-    const line = `- [${memory.sourceHash}; importance=${memory.importance}] ${memory.text}`;
+    const line = `- [${memory.sourceHash}; score=${memory.score.toFixed(3)}; terms=${memory.matchedTerms.join(",")}] ${memory.text}`;
     const candidate = [...lines, line].join("\n");
     if (candidate.length > maxChars) {
       const remaining = maxChars - (lines.join("\n").length + (lines.length ? 1 : 0));

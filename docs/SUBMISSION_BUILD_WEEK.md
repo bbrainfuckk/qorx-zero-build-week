@@ -15,10 +15,11 @@ the current task.
 
 ## What we built
 
-Qorx Zero is a local-first memory layer for AI-assisted development. It
+Qorx Zero is local project memory for Codex. It
 persists project decisions across sessions in IndexedDB, recalls related
 records inside a strict context budget, supports automatic and explicit
-forgetting, and exposes the exact proof frame used for each answer.
+forgetting, and exposes the exact score, matched terms, source hashes, and proof
+frame used for each answer.
 
 The OpenAI adapter uses the Responses API with GPT-5.6 Terra, low reasoning
 effort, low verbosity, and store disabled. The model receives only the current
@@ -32,6 +33,14 @@ wrote the tests and independent notebook, reviewed the provider adapter against
 official OpenAI documentation, and prepared the public submission package.
 Timestamped commits in this repository isolate the Build Week work.
 
+## The Qorx technology
+
+Complete records never leave IndexedDB. A deterministic ranker combines 65%
+keyword relevance, 20% importance, and 15% recency. Expired records are removed
+before recall. Only matching records can enter a proof frame capped at five
+items and 1,600 characters. GPT-5.6 receives that visible frame—not the whole
+store—and must cite its source hashes or identify the missing evidence.
+
 ## Built with
 
 Codex, GPT-5.6 Terra, OpenAI Responses API, React, Vinext, IndexedDB, Node.js,
@@ -40,7 +49,7 @@ Cloudflare Workers-compatible runtime.
 ## Evidence to add
 
 - Live demo:
-- Public repository:
+- Public repository: https://github.com/bbrainfuckk/qorx-zero-build-week
 - Public YouTube demo:
 - Codex task/session ID:
 - Feedback submitted from /feedback:

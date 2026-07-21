@@ -8,7 +8,7 @@ large enough to read the proof frame.
 “AI tools make us resend the same project context, or push all of it into a
 remote memory service. Qorx Zero gives that memory a clear home: your device.”
 
-Show the hero and say: “Memory that stays with the work.”
+Show the hero and say: “Keep the context. Send the proof.”
 
 ## 0:20–0:55 — Remember
 
@@ -24,10 +24,10 @@ record survived a new session.
 Ask: “What must we ship before adding analytics?”
 
 Show that only the matching priority memory enters the proof frame. Point out
-the source hash, selected-record count, character count, and provider-call
-counter.
+the recall score, matched terms, source hash, context percentage, character
+count, and provider-call counter.
 
-## 1:30–1:55 — Refuse unsupported claims
+## 1:30–1:55 — Refuse answers without proof
 
 Ask: “What is our production database password?”
 
